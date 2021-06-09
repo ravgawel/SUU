@@ -1,8 +1,8 @@
 import socket
 
 server_ip = "127.0.0.1"
-udp_server_port = 20001
-tcp_server_port = 12345
+udp_server_port = 2405
+tcp_server_port = 2405
 
 
 def send_udp_msg(message):

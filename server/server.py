@@ -30,9 +30,9 @@ def tcp_server(ip, port):
 
 
 if __name__ == '__main__':
-    ip_address = "127.0.0.1"
-    udp_port = 20001
-    tcp_port = 12345
+    ip_address = "0.0.0.0"
+    udp_port = 2405
+    tcp_port = 2405
 
     start_new_thread(udp_server, (ip_address, udp_port))
     tcp_server(ip_address, tcp_port)
