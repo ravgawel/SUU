@@ -34,6 +34,7 @@ class TcpServer(asyncore.dispatcher):
         self.set_reuse_addr()
         self.bind((host, port))
         self.listen(5)
+        print('TCP server ' + host + ':' + str(port) + ' up and listening')
 
     def handle_accept(self):
         socket, address = self.accept()
