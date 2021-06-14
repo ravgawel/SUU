@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suu-deployment
+  labels:
+    app: suu-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: suu-app
+  template:
+    metadata:
+      labels:
+        app: suu-app
+    spec:
+      containers:
+      - name: suu
+        image: suu:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 2405
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "1"
