@@ -20,6 +20,14 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 2405
+        resources:
+          requests:
+            cpu: 250m
+            memory: 128Mi
+          limits:
+            cpu: 800m
+            memory: 1024Mi
+
         env:
         - name: PYTHONUNBUFFERED
           value: "1"
